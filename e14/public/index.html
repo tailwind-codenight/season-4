@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فصل ۴</title>
+    <link rel="stylesheet" href="./dist/styles/fonts.css" />
+    <link rel="stylesheet" href="./dist/styles/style.css" />
+  </head>
+  <body class="p-5 font-vazirMatn">
+    <input
+      type="email"
+      class="peer/email bg-slate-200 p-4 invalid:bg-red-200"
+    />
+    <input
+      type="number"
+      min="2"
+      max="8"
+      class="peer/number bg-slate-200 p-4 invalid:bg-red-200"
+    />
+
+    <p class="peer-hover-and-focus/email:block hidden">
+      شما اینپوت ایمیل را هاور یا فکوس کرده اید
+    </p>
+    <p class="hidden peer-invalid/email:block">
+      لطفا یک ایمیل معتبر وارد نمایید.
+    </p>
+    <p class="hidden peer-invalid/number:block">
+      لطفا یک عدد معتبر وارد نمایید.
+    </p>
+  </body>
+</html>
