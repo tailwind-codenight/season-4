@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فصل ۴</title>
+    <link rel="stylesheet" href="./dist/styles/fonts.css" />
+    <link rel="stylesheet" href="./dist/styles/style.css" />
+  </head>
+  <body class="p-5 font-vazirMatn">
+    <button
+      class="rounded-sm bg-red-500 px-2 py-1 text-white"
+      onclick="
+      document.getElementById('dialog').showModal()
+      "
+    >
+      باز کردن دیالوگ
+    </button>
+    <dialog
+      class="rounded-lg border-2 border-slate-200 bg-white p-6 backdrop:bg-red-500/50 max-w-96"
+      id="dialog"
+    >
+      <p class="mb-3">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed sint esse
+        molestias dolorum aliquid animi? Officia maxime eligendi, dolore
+        aspernatur, illo esse soluta perferendis a quo unde fugiat ab repellat
+        asperiores accusantium fuga id numquam reiciendis sequi repellendus,
+        quam consequatur ratione natus. Laborum, beatae modi fuga molestiae
+        architecto exercitationem sequi?
+      </p>
+      <button
+        class="rounded-sm bg-red-500 px-2 py-1 text-white"
+        onclick="
+      document.getElementById('dialog').close()
+      "
+      >
+        بستن دیالوگ
+      </button>
+    </dialog>
+  </body>
+</html>

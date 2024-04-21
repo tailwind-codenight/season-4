@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فصل ۴</title>
+    <link rel="stylesheet" href="./dist/styles/fonts.css" />
+    <link rel="stylesheet" href="./dist/styles/style.css" />
+  </head>
+  <body class="p-5 font-vazirMatn">
+    <label
+      id="file-label"
+      for="file-input"
+      class="rounded-md bg-red-500 p-3 text-white hover:bg-red-700"
+      >فایل را انتخاب کنید</label
+    >
+    <input
+      type="file"
+      hidden
+      id="file-input"
+      onchange="
+      // get file name
+      const fileName = this.files?.[0]?.name || 'فایل را انتخاب کنید'
+      // set file name on label
+      document.getElementById('file-label').innerHTML = fileName
+    "
+    />
+  </body>
+</html>
