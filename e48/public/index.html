@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>رستوران وبلکس!</title>
+    <link rel="stylesheet" href="./dist/styles/fonts.css" />
+    <link rel="stylesheet" href="./dist/styles/style.css" />
+  </head>
+  <body class="container font-vazirMatn">
+    <!-- header section -->
+    <header
+      class="mt-5 flex items-center justify-between rounded-3xl bg-white p-3.5 shadow-customShadow1 sm:p-5"
+    >
+      <!-- right part -->
+      <div class="flex items-center gap-0 450:gap-5 sm:gap-10">
+        <img
+          src="./dist/images/logo.png"
+          alt="لوگوی رستوران"
+          class="w-12 sm:w-16"
+        />
+        <!-- black background -->
+        <div
+          class="invisible fixed inset-0 z-10 bg-black/50 450:hidden"
+          id="sidebar-menu-background"
+          onclick="closeSidebar()"
+        ></div>
+        <!-- sidebar container -->
+        <div
+          class="invisible fixed bottom-0 right-0 top-0 z-10 min-w-44 bg-white p-5 shadow-customShadow1 450:visible 450:static 450:min-w-0 450:p-0 450:shadow-none"
+          id="sidebar-menu"
+        >
+          <nav
+            class="flex flex-col gap-3 text-lg text-gray-500 *:text-center 450:flex-row sm:gap-5 sm:text-2xl"
+          >
+            <a
+              href="#pizza"
+              class="hover:text-gray-800"
+              onclick="closeSidebar()"
+              >پیتزا</a
+            >
+            <a
+              href="#burger"
+              class="hover:text-gray-800"
+              onclick="closeSidebar()"
+              >برگر</a
+            >
+            <a
+              href="#stake"
+              class="hover:text-gray-800"
+              onclick="closeSidebar()"
+              >استیک</a
+            >
+          </nav>
+        </div>
+      </div>
+      <!-- left part -->
+      <div class="flex items-center gap-3">
+        <button
+          onclick="document.getElementById('cart-dialog').showModal()"
+          class="rounded-xl bg-red-500 px-3 py-1.5 text-sm text-white hover:bg-red-700 sm:rounded-2xl sm:px-4 sm:py-2 sm:text-base"
+        >
+          سبد خرید
+        </button>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="inline-block size-5 450:hidden"
+          id="sidebar-menu-button"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </div>
+    </header>
+    <!-- main content -->
+    <main class="my-5 sm:my-7 md:my-10">
+      <!-- foods list -->
+      <ul>
+        <!-- pizza -->
+        <li
+          class="group/card relative flex flex-col overflow-hidden border-2 border-b-0 border-gray-300 after:absolute after:right-4 after:top-4 after:flex after:size-10 after:items-center after:justify-center after:rounded-full after:bg-red-500 after:text-sm after:font-bold after:text-white after:content-['20%'] first-of-type:rounded-t-3xl last-of-type:rounded-b-3xl last-of-type:border-b-2 hover:bg-gray-100 sm:flex-row md:after:size-14 md:after:text-base"
+        >
+          <img
+            src="./dist/images/pizza.png"
+            alt="پیتزا"
+            class="max-w-full object-cover sm:max-w-48 lg:max-w-xs"
+          />
+          <div
+            class="flex flex-col gap-2.5 px-4 py-2.5 md:gap-5 md:px-5 md:py-5"
+          >
+            <h2
+              class="text-2xl font-bold target:text-red-500 group-hover/card:text-red-500 lg:text-4xl"
+              id="pizza"
+            >
+              پیتزا
+            </h2>
+            <p
+              class="text-sm text-gray-500 group-has-[:target]/card:text-gray-900 lg:text-lg"
+            >
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
+              ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز
+              و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+            </p>
+            <div class="text-base text-red-500 lg:text-2xl">
+              <span class="line-through">390,000</span> - 312,000 تومان
+            </div>
+          </div>
+        </li>
+        <!-- burger -->
+        <li
+          class="group/card flex flex-col overflow-hidden border-2 border-b-0 border-gray-300 first-of-type:rounded-t-3xl last-of-type:rounded-b-3xl last-of-type:border-b-2 hover:bg-gray-100 sm:flex-row"
+        >
+          <img
+            src="./dist/images/burger.png"
+            alt="برگر"
+            class="max-w-full object-cover sm:max-w-48 lg:max-w-xs"
+          />
+          <div
+            class="flex flex-col gap-2.5 px-4 py-2.5 md:gap-5 md:px-5 md:py-5"
+          >
+            <h2
+              class="text-2xl font-bold target:text-red-500 group-hover/card:text-red-500 lg:text-4xl"
+              id="burger"
+            >
+              برگر
+            </h2>
+            <p
+              class="text-sm text-gray-500 group-has-[:target]/card:text-gray-900 lg:text-lg"
+            >
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
+              ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز
+              و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+            </p>
+            <div class="text-base text-red-500 lg:text-2xl">280,000 تومان</div>
+          </div>
+        </li>
+        <!-- stake -->
+        <li
+          class="group/card flex flex-col overflow-hidden border-2 border-b-0 border-gray-300 first-of-type:rounded-t-3xl last-of-type:rounded-b-3xl last-of-type:border-b-2 hover:bg-gray-100 sm:flex-row"
+        >
+          <img
+            src="./dist/images/stake.png"
+            alt="استیک"
+            class="max-w-full object-cover sm:max-w-48 lg:max-w-xs"
+          />
+          <div
+            class="flex flex-col gap-2.5 px-4 py-2.5 md:gap-5 md:px-5 md:py-5"
+          >
+            <h2
+              class="text-2xl font-bold target:text-red-500 group-hover/card:text-red-500 lg:text-4xl"
+              id="stake"
+            >
+              استیک
+            </h2>
+            <p
+              class="text-sm text-gray-500 group-has-[:target]/card:text-gray-900 lg:text-lg"
+            >
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در
+              ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز
+              و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+            </p>
+            <div class="text-base text-red-500 lg:text-2xl">390,000 تومان</div>
+          </div>
+        </li>
+      </ul>
+      <!-- cart dialog -->
+      <dialog
+        id="cart-dialog"
+        class="w-full max-w-[19rem] rounded-3xl bg-white p-5 backdrop:bg-black/80 sm:max-w-md"
+      >
+        <!-- cart items list -->
+        <ul>
+          <!-- pizza item -->
+          <li class="flex border-t-2 border-gray-300 last-of-type:border-b-2">
+            <img
+              src="./dist/images/pizza.png"
+              alt="پیتزا"
+              class="max-w-24 object-cover"
+            />
+            <div class="flex w-full items-center justify-between p-3 pl-0">
+              <div>
+                <h3 class="font-bold">پیتزا</h3>
+                <div class="mt-2 text-red-500">
+                  <span class="line-through">390,000</span> - 312,000 تومان
+                </div>
+              </div>
+              <div>
+                <button class="p-2 text-red-500">حذف</button>
+              </div>
+            </div>
+          </li>
+          <!-- burger item -->
+          <li class="flex border-t-2 border-gray-300 last-of-type:border-b-2">
+            <img
+              src="./dist/images/burger.png"
+              alt="برگر"
+              class="max-w-24 object-cover"
+            />
+            <div class="flex w-full items-center justify-between p-3 pl-0">
+              <div>
+                <h3 class="font-bold">برگر</h3>
+                <div class="mt-2 text-red-500">280,000 تومان</div>
+              </div>
+              <div>
+                <button class="p-2 text-red-500">حذف</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- total amount -->
+        <div
+          class="flex items-center justify-between rounded-b-2xl bg-gray-300 p-3"
+        >
+          <span>مبلغ کل:</span>
+          <span class="font-bold text-red-500">592,000 تومان</span>
+        </div>
+        <!-- action buttons -->
+        <div class="mt-3 flex items-center justify-between">
+          <button
+            class="p-2 text-red-500"
+            onclick="document.getElementById('cart-dialog').close()"
+          >
+            بستن
+          </button>
+          <button
+            class="rounded-2xl bg-red-500 px-4 py-2 text-white hover:bg-red-700"
+          >
+            تکمیل سفارش
+          </button>
+        </div>
+      </dialog>
+    </main>
+    <!-- scripts -->
+    <script src="./dist/scripts/main.js"></script>
+  </body>
+</html>
